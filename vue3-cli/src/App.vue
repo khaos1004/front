@@ -1,29 +1,35 @@
 <template>
-  <AppHeader @change="changeMessage"  v-bind:appTitle="message"></AppHeader>  
+  <div>
+    <form action="" @submit="submitForm">
+      <div>
+        <label for="userId">id</label>
+        <input class="bg-blue-200" id="userId" type="text" v-model="username">
+      </div>
+      <div>
+        <label for="password">password</label>
+        <input class="bg-blue-200" type="text" v-model="password">
+      </div>
+      <button type="submit">로그인</button>
+    </form>
+  </div>
 </template>
 
 <script>
-import AppHeader from './components/AppHeader.vue';
-
   export default {
-    components:{
-      // '컴포넌트이름': 컴포넌트내용
-      // 'app-header': AppHeader 아래와같이 키값도 파스칼케이스로 작성
-      // 'AppHeader': AppHeader 아래와같이 키와 밸류가 같을경우 아래와같이 한단어로 표현 가능
-      // AppHeader
-      AppHeader
-    },
-    data() {
-      return {
-        message: '앱 해더 컴포넌트'
+    data(){
+      return{
+        username:'',
+        password:''
       }
     },
     methods:{
-      changeMessage(){
-        this.message = '변경됨'
+      submitForm(event){
+        event.preventDefault();
+        console.log("폼 제출됨")
       }
-    }
+    }    
   }
+  
 </script>
 
 <style scoped>
