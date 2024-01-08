@@ -1,6 +1,8 @@
-.DS_Store
-node_modules
-/dist
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
 
 
 # local env files
