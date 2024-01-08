@@ -11,6 +11,7 @@ export default ({
       state.user = userData;
     }
   },
+
   actions: {
     async handleLogin({ commit }, loginData) {
       try {

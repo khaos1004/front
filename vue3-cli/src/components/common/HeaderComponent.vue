@@ -84,6 +84,6 @@ export default {
     return {
       headerMenu
     };
-    }
+    },
 }
 </script>
